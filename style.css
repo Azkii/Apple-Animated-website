@@ -1,0 +1,448 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@keyframes dropUp {
+    0% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes opacityShow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  
+#NavBar-mainApple {
+    background-color: #363636;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#NavBar-mainApple > * {
+    list-style: none;
+    margin: 0 40px;
+    color: whitesmoke;
+    opacity: 0.9;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+#NavBar-mainApple img {
+    width: 20px;
+}
+#NavBar-macBookPro16 {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+    border-bottom: solid #3636361a 1px;
+    background-color: white;
+    backdrop-filter: blur(10px);
+}
+#NavBar-macBookPro16__links button {
+    margin: 0 10px;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+#NavBar-macBookPro16__links button:nth-child(3) {
+    background-color: rgb(63, 118, 219);
+    padding: 6px 12px;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+#NavBar-macBookPro16__link--clicked {
+    opacity: 0.4;
+}
+#macbook-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+#macbook-header {
+    position: absolute;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation-name: dropUp,opacityShow;
+    animation-duration: 1.5s;
+}
+#macbook-header h4 {
+    font-size: 1.8rem;
+}
+#macbook-header h1 {
+    font-size: 5rem;
+    width: 600px;
+    text-align: center;
+}
+#macbook-info__video {
+    margin-top: 80px;
+    display: flex;
+    z-index: -1;
+    animation-name: opacityShow;
+    animation-duration: 2s;
+}
+.videoWhiteLine {
+    bottom: 0;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 5px;
+}
+#macBookInfo {
+    margin: auto;
+    text-align: left;
+    width: 800px;
+    font-size: 1.8rem;
+    opacity: 0.6;
+    height: 400px;
+}
+#macBookSpec {
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 800px;
+}
+#macBookSpec-video {
+    top: 0;
+    position: absolute;
+}
+#macBookSpec-leftText, #macBookSpec-rightText {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    align-items: center;
+    z-index: 100;
+    width: 50%;
+}
+#macBookSpec-leftText {
+    align-items: flex-end;
+    padding-right: 200px;
+}
+#macBookSpec-rightText {
+    align-items: flex-start;
+    padding-left: 200px;
+}
+#macBookSpec > ul > li {
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 300px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: solid rgba(128, 128, 128, 0.452) 1px;
+}
+#macBookSpec > ul > li > p {
+    opacity: 0.6;
+}
+#retinaDisplay {
+    position: relative;
+}
+#retinaDisplay__header {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    font-size: 3.5rem;
+    margin-bottom: 100px;
+}
+#retinaDisplay__header::first-line {
+    color: rgba(0, 0, 0, 0.5);
+}
+#retinaDisplay__Slide1 {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+#retinaDisplay__Slide1 > img {
+    height: 85%;
+    width: 50%;
+    object-fit: cover;
+    z-index: 2;
+    object-position: top;
+}
+#retinaDisplay__Slide1 > figcaption {
+    font-size: 1.2rem;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 10%;
+}
+#retinaDisplay__Slide1__background {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 50%;
+    background-color: #f2f2f2;
+}
+
+#retinaDisplay__Slide2 {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#retinaDisplay__Slide2 > img {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+}
+#retinaDisplay__Slide2__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 4rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-bottom: 150px;
+}
+#retinaDisplay__description {
+    text-align: left;
+    font-size: 2rem;
+    width: 60%;
+    margin: auto;
+    color: rgba(0, 0, 0, 0.5);
+}
+#retinaDisplay__carousel {
+    margin: auto;
+    margin-top: 100px;
+    width: 1200px;
+    min-width: 1000px;
+    height: 700px;
+    background-color: rgba(240, 240, 240, 0.8);
+    border-radius: 4px;
+    margin-bottom: 100px;
+}
+#retinaDisplay__carousel {
+    display: flex;
+    position: relative;
+}
+#retinaDisplay__carousel__text {
+    transition: ease-in 0.4s;
+    padding: 0 40px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+#retinaDisplay__carousel__images {
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+}
+#retinaDisplay__carousel__images > img {
+    opacity: 0.6;
+    position: absolute;
+    bottom: 0;
+    transition: all ease 1s;
+}
+#retinaDisplay__carousel__images > img:nth-child(2) {
+    margin-left: 50px;
+}
+#retinaDisplay__carousel__images > img:nth-child(3) {
+    margin-left: 200px;
+}
+#retinaDisplay__carousel__images > img:nth-child(4) {
+    opacity: 1;
+    margin-left: 350px;
+}
+#retinaDisplay__carousel__buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+#retinaDisplay__carousel__buttons > button {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 100%;
+    border: rgba(0, 0, 0, 0.6) solid 2px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+#retinaDisplay__carousel__buttons > button:nth-child(1) {
+    margin-right: 5px;
+}
+#retinaDisplay__matrixInfo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1200px;
+    margin: auto;
+}
+.retinaDisplay__matrixInfo__option {
+   padding-top: 50px;
+   font-size: 3.5rem;
+   color: rgba(0, 0, 0, 0.9);
+   border-top: solid rgba(0, 0, 0, 0.5) 1px;
+   min-width: 250px;
+}
+.retinaDisplay__matrixInfo__option > p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+#processorInfo {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#processorInfo__header {
+    padding: 0 50px;
+    width: 1200px;
+    font-weight: bold;
+    font-size: 4rem;
+}
+#processorInfo__header > p {
+    opacity: 0.6;
+}
+#processorInfo__slide1 {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#processorInfo__slide1 > img {
+    height: 100vh;
+    object-position: top;
+    object-fit: cover;
+}
+#processorInfo__slide1__background {
+    position: absolute;
+    z-index: -1;
+    width: 0%;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+#processorInfo__slide1__text {
+    opacity: 0;
+    position: absolute;
+    left: 10%;
+    width: 300px;
+    font-size: 1.2rem;
+}
+#processorInfo__slide1__text > h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+#processorInfo__slide2 {
+    position: absolute;
+    object-fit: cover;
+    right: 0;
+    height: 100vh;
+    background-image: url("images/OakFelder2.png");
+    background-position: right;
+    /*background-size: cover; other option*/
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+#processorInfo__description {
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 80px;
+    width: 1000px;
+    font-size: 2rem;
+}
+#processorInfo__description > h4 > b {
+    color: rgba(0, 0, 0, 0.9)
+}
+#thermalInfo {
+    margin: auto;
+    margin-top: 100px;
+    background-color: #f2f2f2;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 50px;
+}
+#thermalInfo__replayVideo {
+    display: none;
+    border: none;
+    outline: none;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+#thermalInfo__replayVideo > i {
+    font-size: 0.6rem;
+}
+#thermalInfo__efficiencyInc {
+    transition: ease-in 0.2s;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.thermalInfo__efficiencyInc__option {
+    min-width: 300px;
+    padding-top: 50px;
+    border-top: solid rgba(0, 0, 0, 0.2) 1px;
+    font-size: 3rem;
+}
+.thermalInfo__efficiencyInc__option > h1 {
+    display: flex;
+}
+.thermalInfo__efficiencyInc__option > h1 > p {
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+.thermalInfo__efficiencyInc__option > p {
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.6;
+}
+#thermalInfo__description {
+    margin-top: 100px;
+    width: 80%;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+#benchmarkInfo {
+    width: 1200px;
+    height: 100vh;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+}
