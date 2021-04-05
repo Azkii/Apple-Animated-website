@@ -20,10 +20,22 @@ window.addEventListener("load", () => {
 const displayBenchmark = () => {
     benchmarkBtns.forEach(button => {
         button.addEventListener("click", () => {
-            displayBenchmark_graph(button.getAttribute("name"));
+//animate transition display benchmark info
+            const benchamrkBoxAnimate = document.getElementById("benchmarkInfo__results");
+            const graph1 = document.querySelectorAll(".benchmarkInfo__results__graph__line")[0];
+            const graph2 = document.querySelectorAll(".benchmarkInfo__results__graph__line")[1];
+            benchamrkBoxAnimate.style.opacity = 0;
+        //set graph1/2 width to animate
+            setTimeout(() => {
+                graph1.style.width = `0px`;
+                graph2.style.width = `0px`;
+                displayBenchmark_graph(button.getAttribute("name"));
+                benchamrkBoxAnimate.style.opacity = 1;
+            },500)
         })
     })
 }
+
 const displayBenchmark_graph = (index) => {
     const data = benchmarkData.filter(data => {
         return data.id == index;
@@ -31,6 +43,7 @@ const displayBenchmark_graph = (index) => {
 //get documents from html
     const graphValue = Math.round((data[0].quadCore / data[0].eightCore)*100)/100;
 
+    const graph1 = document.querySelectorAll(".benchmarkInfo__results__graph__line")[0];
     const graph2 = document.querySelectorAll(".benchmarkInfo__results__graph__line")[1];
 
     const resultBox = document.getElementById("benchmarkInfo__results__increases");
@@ -38,11 +51,17 @@ const displayBenchmark_graph = (index) => {
     const resultNumber = resultBox.querySelector("h1").querySelectorAll("p")[0];
     const resultSymbol = resultBox.querySelector("h1").querySelectorAll("p")[1];
     const resultInfo = resultBox.querySelectorAll("p")[2];
-//assign data/styles to documents
-    graph2.style.width = `${500 * graphValue}px`;
+//assign data/styles to documents // animate width line
     resultInfo.innerText = data[0].textInfo;
-
-//check if contains %
+    setTimeout(() => {
+        graph1.style.transition = `all 0.8s`;
+        graph2.style.transition = `all 0.8s`;
+        graph1.style.width = "500px";
+        graph2.style.width = `${500 * graphValue}px`;
+    },200)
+    graph1.style.transition = ``;
+    graph2.style.transition = ``;
+//check if contains % or x
     if ( data[0].increse[data[0].increse.length-1] === "%" || data[0].increse[data[0].increse.length-1] === "x") {
         const increseNumber = data[0].increse.slice(0,data[0].increse.length-1)
         const symbol = data[0].increse[data[0].increse.length-1];
@@ -59,7 +78,6 @@ const displayBenchmark_graph = (index) => {
 }
 
 const benchmarkBtnColorHandler = (clickedButton) => {
-    console.log(clickedButton)
     benchmarkBtns.forEach(button => {
         (button.getAttribute("name") === clickedButton) ? 
             button.style.color = "black"
