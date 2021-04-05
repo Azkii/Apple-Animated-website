@@ -490,17 +490,19 @@
     height: 8px;
     border-radius: 50px;
     background-color: black;
+    transition: all 0.2s;
 }
 #benchmarkInfo__results__increases {
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    width: 180px;
 }
 #benchmarkInfo__results__increases > h1 {
     display: flex;
     font-size: 5rem;
 }
-#benchmarkInfo__results__increases > h1 > p {
+#benchmarkInfo__results__increases > h1 > p:nth-child(2) {
     margin-top: 1.8rem;
     font-size: 3rem;
 }
