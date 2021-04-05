@@ -203,7 +203,47 @@
         </p>
     </section>
     <section id="benchmarkInfo">
-        Test
+        <div id="benchmarkInfo_benchmarksList">
+            <button style="color: black;" name="1">Logic Pro X</button>
+            /
+            <button name="2">MATLAB</button>
+            /
+            <button name="3">Autodesk Maya</button>
+            /
+            <button name="4">Blackmagic Fusion Studio</button>
+            /
+            <button name="5">Wolfram Mathematica</button>
+            /
+            <button name="6">WebKit Compile</button>
+            /
+            <button name="7">NASA</button>
+            /
+            <button name="8">Adobe Photoshop</button>
+            /
+            <button name="9">Pixelmator Pro</button>
+            /
+            <button name="10">Adobe Lightroom Classic</button>
+            /
+            <button name="11">Adobe Premiere Pro</button>
+            /
+            <button name="12">Final Cut Pro X</button>
+        </div>
+        <div id="benchmarkInfo__results">
+            <div id="benchmarkInfo__results__graphs">
+                <div class="benchmarkInfo__results__graph">
+                    <div style="width: 550px;" class="benchmarkInfo__results__graph__line"></div>
+                    <h4>8-core 16-inch MacBook Pro</h4>
+                </div>
+                <div class="benchmarkInfo__results__graph">
+                    <div style="width: 100px;"  class="benchmarkInfo__results__graph__line"></div>
+                    <h4>8-core 16-inch MacBook Pro</h4>
+                </div>
+            </div>
+            <div  id="benchmarkInfo__results__increases">
+                <h1>95 <p>%</p></h1>
+                <p>faster render scene to disk</p>
+            </div>
+        </div>
     </section>
 
 <!--Import section-->
@@ -227,8 +267,9 @@
         integrity="sha512-Ey+nIg+Ue8gUAaCNjR1KHR8nwDjWn9QXoQbynR/X+V66s6u1oqynnuRQ8zSgg5f5gBNb2Bzsu1pItCi3sPkbfA=="
         crossorigin="anonymous">
     </script>
-    <script defer src="app.js"></script>
+    <script defer src="animateOnScroll.js"></script>
     <script defer src="animationOnlyOnLoad.js"></script>
     <script defer src="carousel.js"></script>
+    <script defer type="module" src="app.js"></script>
 </body>
 </html>
