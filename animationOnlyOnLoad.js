@@ -30,6 +30,10 @@ animations[3].from("#thermalInfo__video",1,{onCompleteScope:this.target, onCompl
   },4000)
 }});
 animations[4].from("#thermalInfo__efficiencyInc",1,{opacity:0},{opacity:1});
+animations[5].from("#memoryInfo__video",1,{onCompleteScope:this.target, onComplete:function(){
+  this.target[0].play();
+}});
+animations[6].from("#memoryInfo__options",1,{opacity:0},{opacity:1});
 // observer handler
 function animHandler(targets) {
   for (var entry of targets) {

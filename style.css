@@ -506,6 +506,58 @@
     margin-top: 1.8rem;
     font-size: 3rem;
 }
+#memoryInfo {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#memoryInfo > video {
+    width: 100%;
+    margin-bottom: 50px;
+}
+#memoryInfo__description {
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: left;
+}
+#memoryInfo__description > span {
+    color: rgba(0, 0, 0, 0.9);
+}
+#memoryInfo__options {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: ease-in 0.2s;
+}
+.memoryInfo__options__option {
+    border-top: solid rgba(0, 0, 0, 0.2) 1px;
+    padding-top: 25px;
+    width: 40%;
+}
+.memoryInfo__options__option > p {
+    opacity: 0.6;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.memoryInfo__options__option > h1 {
+    font-size: 4.5rem;
+}
+.memoryInfo__options__option > h1 > span {
+    font-size: 2.5rem;
+}
+.memoryInfo__options__option > h4 {
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+
+
+
 
 
 
