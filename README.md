@@ -9,8 +9,4 @@ Technologies:
   Orginal: https://www.apple.com/macbook-pro-16
 </p>
 </br>
-<p>
-  <img src="">
-  &nbsp;&nbsp;&nbsp;
-  <img src="">
-</p>
+![] (https://github.com/Azkii/Apple-Animated-website/blob/master/readme%20files/apple1.gif)
