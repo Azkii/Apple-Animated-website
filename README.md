@@ -9,4 +9,8 @@ Technologies:
   Orginal: https://www.apple.com/macbook-pro-16
 </p>
 </br>
-![] (https://github.com/Azkii/Apple-Animated-website/blob/master/readme%20files/apple1.gif)
+<img src="https://github.com/Azkii/Apple-Animated-website/blob/master/readme%20files/apple1.gif" align="center">
+<img src="https://github.com/Azkii/Apple-Animated-website/blob/master/readme%20files/apple2.gif" align="center">
+<img src="https://github.com/Azkii/Apple-Animated-website/blob/master/readme%20files/apple3.gif" align="center">
+<img src="https://github.com/Azkii/Apple-Animated-website/blob/master/readme%20files/apple4.gif" align="center">
+<img src="https://github.com/Azkii/Apple-Animated-website/blob/master/readme%20files/apple5.gif" align="center">
